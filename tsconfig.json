@@ -1,3 +1,8 @@
 {
+    "compileOnSave": true,
     
+     "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
 }

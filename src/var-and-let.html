@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TypeScript Labs- Var and Let</title>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="highlight.pack.js"></script>
+       <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Learn ES6 using TypeScript - let and var </h1>
+        <h2>Using var now</h2>
+
+		<div class="row">
+			<blockquote>
+				<p>In ES5, variables are   </p>
+                <ol>
+                    <li>function scoped.</li>
+                    <li>hoisted to the to the top of the function.</li>
+
+                    <li></li>
+                </ol>
+
+			</blockquote>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">var-and-let.ts</h3>
+					</div>
+					<div class="panel-body">
+						<pre>
+							<code class="typescript">
+
+    var x = 3;
+    function func(randomize) {
+        if (randomize) {
+            var x = Math.random();
+            return x;
+        }
+        return x;
+    }
+    var result = func(false); // undefined
+    toastr.info("result= " + result);
+
+                            </code>
+						</pre>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">var-and-let.js</h3>
+					</div>
+					<div class="panel-body">
+						<pre>
+							<code class="javascript">
+
+    var x = 3;
+    function func(randomize) {
+        if (randomize) {
+            var x = Math.random();
+            return x;
+        }
+        return x;
+    }
+    var result = func(false);
+    toastr.info("result= " + result);
+                        </code>
+
+						</pre>
+
+                        <button type="button" class="btn btn-large btn-block btn-primary" onclick="showResult()">Show Result.</button>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script>
+    $(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script src="var-and-let.js">
+
+</script>
+</body>
+
+</html>

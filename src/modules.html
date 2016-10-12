@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TypeScript Labs</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="highlight.pack.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<h1>Learn ES6 using TypeScript - Modules </h1>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Modules- lib.ts</h3>
+					</div>
+					<div class="panel-body">
+						<code>
+                            <pre>
+    export const sqrt=Math.sqrt;
+
+    export function square(x){
+        return x * x;
+    }
+                            </pre>
+                        </code>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">Modules - lib.js</h3>
+					</div>
+					<div class="panel-body">
+						<code>
+                            <pre>
+    "use strict";
+    exports.sqrt = Math.sqrt;
+    function square(x) {
+        return x * x;
+    }
+    exports.square = square;
+
+                            </pre>
+                        </code>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Modules- main.ts</h3>
+					</div>
+					<div class="panel-body">
+						<code>
+                            <pre>
+    import {sqrt,square} from './lib';
+    toastr.info(square(5));
+                            </pre>
+                        </code>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">Modules - main.js</h3>
+					</div>
+					<div >
+						<pre>
+							<code class="javascript">
+        "use strict";
+    var lib_1 = require('./lib');
+    toastr.info(lib_1.square(5));
+
+
+                        </code>
+						</pre>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+	<script src="node_modules/systemjs/dist/system.js"></script>
+	<script>
+  // set our baseURL reference path
+  System.defaultJSExtensions = true;
+  SystemJS.config({
+    baseURL: './'
+  });
+
+  // loads /js/main.js
+  SystemJS.import('main.js');
+</script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script>
+    $(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+</body>
+
+</html>
