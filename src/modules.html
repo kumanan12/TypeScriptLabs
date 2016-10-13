@@ -5,31 +5,33 @@
 	<meta charset="UTF-8">
 	<title>TypeScript Labs</title>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-					crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-					crossorigin="anonymous">
+		crossorigin="anonymous">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-					crossorigin="anonymous">
+		crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
 	<link href="prism.css" rel="stylesheet" />
-
+	<script src="https://use.fontawesome.com/71e8cb28ea.js"></script>
 </head>
 
 <body>
 	<div class="container">
-	
+
 		<div class="row">
 			<blockquote>
-				<p><ul>
-					<li>Modules are excuted in their own scope</li>
-					<li>All variables and functions are not visible outsode the file, Unless</li>
-					<li>It is decorated with <strong>export</strong></li>
-				</ul> </p>
-				
+				<p>
+					<ul>
+						<li>Modules are excuted in their own scope</li>
+						<li>All variables and functions are not visible outsode the file, Unless</li>
+						<li>It is decorated with <strong>export</strong></li>
+					</ul>
+				</p>
+
 			</blockquote>
 		</div>
 		<div class="row">
@@ -41,12 +43,12 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
-        
+
 		//private function
 		function youCantCallMe(){
            toast.info("Inside youCantCallMe ");
 		}
-		//public function                 
+		//public function
     	export const sqrt=Math.sqrt;
     	export function square(x){
         	return x * x;
@@ -64,7 +66,7 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-javascript">
-                            
+
 	"use strict";
 	//private function
 	function youCantCallMe() {
@@ -75,7 +77,7 @@
 		return x * x;
 	}
 	exports.square = square;
-                          
+
                         </code>
 						</pre>
 					</div>
@@ -92,11 +94,11 @@
 					</div>
 					<div class="panel-body">
 						<pre>
-						<code class="language-typescript">
-                          
+							<code class="language-typescript">
+
     import {sqrt,square} from './lib';
     toastr.info(square(5));
-                           
+
                         </code>
 						</pre>
 					</div>
@@ -124,19 +126,21 @@
 		</div>
 		<div class="row">
 			<blockquote>
-				<p><ul>
-					<li>You need Module Loader- To Load the modules as needed.</li>
-					<li>SystemJS, Webpack etc.</li>
-					<li>Modules are loaded Async</li>
-				</ul> </p>
-				
+				<p>
+					<ul>
+						<li>You need Module Loader- To Load the modules as needed.</li>
+						<li>SystemJS, Webpack etc.</li>
+						<li>Modules are loaded Async</li>
+					</ul>
+				</p>
+
 			</blockquote>
 		</div>
 	</div>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-					crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script>
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -153,7 +157,7 @@
   SystemJS.import('main.js');
 </script>
 	<script src="prism.js">
-		
+
 	</script>
 </body>
 
