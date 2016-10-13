@@ -2,7 +2,7 @@
     "compileOnSave": true,
     
      "exclude": [
-        "node_modules",
+        "src/node_modules",
         "**/*.spec.ts"
     ]
 }

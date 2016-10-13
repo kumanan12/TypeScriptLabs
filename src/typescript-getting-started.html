@@ -23,7 +23,7 @@
 
 <body>
 	<div class="container">
-		<h1>Learn ES6 using TypeScript - Getting Started</h1>
+	
 		<h2>Installing and configuring TypeScript</h2>
 		<div class="row">
 			<ul>
@@ -68,13 +68,41 @@
 					   </code>
 					   </pre>
 					</li>
-					<li>typings.json</li>
+					<li>typings.json
+						<img src="https://camo.githubusercontent.com/ab6230980c6f9ac22dbdf32891b1215e6b0cc49b/68747470733a2f2f63646e2e7261776769742e636f6d2f747970696e67732f747970696e67732f6d61737465722f6c6f676f2e737667" alt="">
+						<pre>
+							<code class="langiage-npm">
+	# Install Typings CLI utility.
+	npm install typings --global
+
+	# Search for definitions.
+	typings search tape
+
+	# Find a definition by name.
+	typings search --name react
+
+	# If you use the package as a module:
+	# Install non-global typings (defaults to "npm" source, configurable through `defaultSource` in `.typingsrc`).
+	typings install debug --save
+
+
+
+						</code>
+						</pre>
+					</li>
 				</ol>
 				</div>
-				<blockquote>
-						<p>tscon </p>
-						
-					</blockquote>
+				
+				</li>
+				<li>
+					<h3>
+						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 
+						Complie TypeScript</h3>
+						<pre>
+							<code class="language-typescript">
+	tsc filename.ts							
+							</code>
+						</pre>
 				</li>
 			</ul>
 

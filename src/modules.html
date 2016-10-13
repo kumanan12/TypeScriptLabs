@@ -21,11 +21,15 @@
 
 <body>
 	<div class="container">
-		<h1>Learn ES6 using TypeScript - Modules </h1>
+	
 		<div class="row">
 			<blockquote>
-				<p>Modules </p>
-				<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+				<p><ul>
+					<li>Modules are excuted in their own scope</li>
+					<li>All variables and functions are not visible outsode the file, Unless</li>
+					<li>It is decorated with <strong>export</strong></li>
+				</ul> </p>
+				
 			</blockquote>
 		</div>
 		<div class="row">
@@ -37,7 +41,12 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
-                           
+        
+		//private function
+		function youCantCallMe(){
+           toast.info("Inside youCantCallMe ");
+		}
+		//public function                 
     	export const sqrt=Math.sqrt;
     	export function square(x){
         	return x * x;
@@ -56,13 +65,16 @@
 						<pre>
 							<code class="language-javascript">
                             
-    "use strict";
-    exports.sqrt = Math.sqrt;
-    function square(x) {
-        return x * x;
-    }
-    exports.square = square;
-
+	"use strict";
+	//private function
+	function youCantCallMe() {
+		toastr.info("Inside youCantCallMe ");
+	}
+	exports.sqrt = Math.sqrt;
+	function square(x) {
+		return x * x;
+	}
+	exports.square = square;
                           
                         </code>
 						</pre>
@@ -109,6 +121,16 @@
 				</div>
 			</div>
 
+		</div>
+		<div class="row">
+			<blockquote>
+				<p><ul>
+					<li>You need Module Loader- To Load the modules as needed.</li>
+					<li>SystemJS, Webpack etc.</li>
+					<li>Modules are loaded Async</li>
+				</ul> </p>
+				
+			</blockquote>
 		</div>
 	</div>
 
