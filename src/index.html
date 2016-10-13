@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-	<link rel="stylesheet" href="styles/default.css">
+	<link href="prism.css" rel="stylesheet" />
    <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -29,7 +29,7 @@
 					</div>
 					<div class="panel-body">
 						<pre>
-							<code class="javascript">
+							<code class="language-typescript">
 
 function greet(){
     toastr.info("Hello World");
@@ -47,7 +47,7 @@ function greet(){
 					</div>
 					<div class="panel-body">
 						<pre>
-							<code class="javascript">
+							<code class="language-javascript">
 
 function greet(){
     toastr.info("Hello World");
@@ -73,17 +73,13 @@ function greet(){
 	<script>
         greet();
     </script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script>
+	
+	<script src="prism.js">
+		
+	</script>
 
 
-<script>
-     $(document).ready(function() {
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 </body>
 
 </html>

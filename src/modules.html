@@ -5,27 +5,26 @@
 	<meta charset="UTF-8">
 	<title>TypeScript Labs</title>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-		crossorigin="anonymous"></script>
+					crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-		crossorigin="anonymous">
+					crossorigin="anonymous">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-		crossorigin="anonymous">
+					crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
-	<link rel="stylesheet" href="styles/default.css">
-	<script src="highlight.pack.js"></script>
+	<link href="prism.css" rel="stylesheet" />
 
 </head>
 
 <body>
 	<div class="container">
 		<h1>Learn ES6 using TypeScript - Modules </h1>
-        <div class="row">
+		<div class="row">
 			<blockquote>
-				<p>Modules  </p>
+				<p>Modules </p>
 				<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 			</blockquote>
 		</div>
@@ -36,15 +35,15 @@
 						<h3 class="panel-title">Modules- lib.ts</h3>
 					</div>
 					<div class="panel-body">
-						<code>
-                            <pre>
-    export const sqrt=Math.sqrt;
-
-    export function square(x){
-        return x * x;
-    }
-                            </pre>
-                        </code>
+						<pre>
+							<code class="language-typescript">
+                           
+    	export const sqrt=Math.sqrt;
+    	export function square(x){
+        	return x * x;
+    	}
+                            </code>
+						</pre>
 					</div>
 				</div>
 			</div>
@@ -54,8 +53,9 @@
 						<h3 class="panel-title">Modules - lib.js</h3>
 					</div>
 					<div class="panel-body">
-						<code>
-                            <pre>
+						<pre>
+							<code class="language-javascript">
+                            
     "use strict";
     exports.sqrt = Math.sqrt;
     function square(x) {
@@ -63,8 +63,9 @@
     }
     exports.square = square;
 
-                            </pre>
+                          
                         </code>
+						</pre>
 					</div>
 				</div>
 			</div>
@@ -78,12 +79,14 @@
 						<h3 class="panel-title">Modules- main.ts</h3>
 					</div>
 					<div class="panel-body">
-						<code>
-                            <pre>
+						<pre>
+						<code class="language-typescript">
+                          
     import {sqrt,square} from './lib';
     toastr.info(square(5));
-                            </pre>
+                           
                         </code>
+						</pre>
 					</div>
 				</div>
 			</div>
@@ -92,10 +95,10 @@
 					<div class="panel-heading">
 						<h3 class="panel-title">Modules - main.js</h3>
 					</div>
-					<div >
+					<div>
 						<pre>
-							<code class="javascript">
-        "use strict";
+							<code class="language-javascript">
+	"use strict";
     var lib_1 = require('./lib');
     toastr.info(lib_1.square(5));
 
@@ -111,7 +114,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
+					crossorigin="anonymous"></script>
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -127,14 +130,9 @@
   // loads /js/main.js
   SystemJS.import('main.js');
 </script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script>
-    $(document).ready(function() {
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+	<script src="prism.js">
+		
+	</script>
 </body>
 
 </html>

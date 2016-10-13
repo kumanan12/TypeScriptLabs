@@ -1,5 +1,21 @@
 {
+    "name": "typescript-labs",
+  "version": "1.0.0",
+    "scripts": {
+        "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+        "lite": "lite-server",
+        "postinstall": "typings install",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "typings": "typings"
+    },
     "dependencies": {
         "systemjs": "*"
+    },
+    "devDependencies": {
+        "concurrently": "^3.0.0",
+        "lite-server": "^2.2.2",
+        "typescript": "^2.0.3",
+        "typings": "^1.4.0"
     }
 }
