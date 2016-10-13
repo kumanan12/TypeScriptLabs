@@ -18,9 +18,8 @@
 
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" type="" href="prism.css">
-	<script src="prism.js">
+	<script src="prism.js">	</script>
 	<script src="https://use.fontawesome.com/71e8cb28ea.js"></script>
-	</script>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
 				</ol>
 
 			</blockquote>
-		</div>
+		</div><!--end of row-->
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-primary">
@@ -49,7 +48,6 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
-
     var x = 3;
     function func(randomize) {
         if (randomize) {
@@ -59,7 +57,6 @@
         return x;
     }
     var result = func(false);
-
                             </code>
 						</pre>
 					</div>
@@ -73,7 +70,6 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-javascript">
-
     var x = 3;
     function func(randomize) {
         if (randomize) {
@@ -83,9 +79,7 @@
         return x;
     }
     var result = func(false);
-
                         </code>
-
 						</pre>
 
 						<button type="button" class="btn btn-large btn-block btn-primary" onclick="showResult()">Show Result.</button>
@@ -94,13 +88,80 @@
 				</div>
 			</div>
 
-		</div>
-    <div class="row">
-        <h2>Using let now</h2>
-    </div>
+		</div><!--end of row-->
+		<div class="row">
+			<div class="h2 center-block">Now Refactoring using let</div>
+		</div><!--end of row-->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">var-and-let.ts</h3>
+					</div>
+					<div class="panel-body">
+						<pre><code class="language-typescript">
+		let x = 3;
+		function func(randomize) {
+			if (randomize) {
+				let x = Math.random();
+				return x;
+			}
+			return x;
+		}
+		var result = func(false);
+                            </code>
+						</pre>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">var-and-let.js</h3>
+					</div>
+					<div class="panel-body">
+						<pre>
+							<code class="language-javascript">
+	var x = 3;
+	function func(randomize) {
+		if (randomize) {
+			var x_1 = Math.random();
+			return x_1;
+		}
+		return x;
+	}
+	var result = func(false);
+                        </code>
+						</pre>
 
+						<button type="button" class="btn btn-large btn-block btn-primary" onclick="showResultOfLet()">Show Result.</button>
 
-	</div>
+					</div>
+				</div>
+			</div>
+
+		</div><!--end of row-->
+		<div class="row">
+			<div class="col-md-1">
+                <a href="simple-function.html" class="btn">
+                    <span class="fa-stack fa-lg pull-left">
+   	                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                   </span>
+                </a>
+			</div>
+			<div class="col-md-10 ">
+				<a href="toc.html" class="btn btn-primary center-block">Home</a>
+			</div>
+			<div class="col-md-1">
+				<a href="modules.html" class="btn">
+                    <span class="fa-stack fa-lg pull-right">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                   </span>
+                </a>
+			</div>
+		</div><!-- end of row-->
+	</div><!--end of container-->
+
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -108,7 +169,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 
-	<script src="var-and-let.js">
+	<script src="var.js">
 
 </script>
 </body>
