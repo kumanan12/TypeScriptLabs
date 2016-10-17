@@ -6,17 +6,17 @@ function bar() {
     };
 }
 
-function foo() {
-    return [1,2,3];
-}
-var [,,b] = foo();
-var { x, z } = bar();
+// function foo() {
+//     return [1,2,3];
+// }
+// var [,,b] = foo();
+// var { x, z } = bar();
 
-var x = 2, y = 3,
-    o = {
-        x,
-        y
-    };
+// var x = 2, y = 3,
+//     o = {
+//         x,
+//         y
+//     };
 
 // for(var idx of a){
 //     console.log(idx);
