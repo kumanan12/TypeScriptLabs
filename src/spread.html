@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>TypeScript Labs</title>
+	<title>TypeScript Labs- Spread and Rest</title>
 
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
 		crossorigin="anonymous"></script>
@@ -27,23 +27,21 @@
 
 <body>
 	<div class="container">
-		<h1>Learn ES6 using TypeScript - Title </h1>
-
-		<div class="row">
-			<blockquote>
-				<p>functions </p>
-				<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-			</blockquote>
-		</div>
+		<h1>Spread and Rest <q>(...)</q> </h1>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">file name</h3>
+						<h3 class="panel-title">spread.ts</h3>
 					</div>
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
+	function add(x,y,z){
+		return x + y + z;
+	}
+
+	var result = add(...[1,2,3]);
                             </code>
 						</pre>
 					</div>
@@ -52,39 +50,91 @@
 			<div class="col-md-6">
 				<div class="panel panel-success">
 					<div class="panel-heading">
-						<h3 class="panel-title">file name is JS</h3>
+						<h3 class="panel-title">spread.js</h3>
 					</div>
 					<div class="panel-body">
 						<pre>
 							<code class="language-javascript">
+	function add(x, y, z) {
+		return x + y + z;
+	}
+	var result = add.apply(void 0, [1, 2, 3]);
+
                             </code>
 						</pre>
+						<button type="button" class="btn btn-large btn-block btn-primary" onclick="log(result)">Show Result.</button>
 					</div>
 				</div>
 			</div>
 
 		</div>
+		<!--end of row-->
+		<div class="row">
+			<blockquote>
+				When the array is passed as a function to a parameter, it spreads out into invidual values.
+			</blockquote>
+		</div>
+
 		<!-- end of row-->
 		<div class="row">
-			<div class="col-md-1">
-				<a href="typescript-getting-started.html" class="btn">
-					<span class="fa-stack fa-lg pull-left">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">rest.ts</h3>
+					</div>
+					<div class="panel-body">
+						<pre>
+							<code class="language-typescript">
+	function addAll(x, y,...numbers){
+		var sum = x + y;
+		numbers.forEach(function(arg){
+			sum += arg;
+		});
+		return sum;
+	}
+	var result1 = addAll(1,2,3,4,5);
+							</code>
 
-                </span>
-				</a>
+						</pre>
+						<blockquote>
+							<p>Parameters 1 and 2 get assigned to x and y</p>
+							<p>The <strong>...numbers</strong> means get the rest of parameters into an array.</p>
+						</blockquote>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-10 ">
-				<a href="toc.html" class="btn btn-primary center-block">Home</a>
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">rest.js</h3>
+					</div>
+					<div class="panel-body">
+						<pre>
+							<code class="language-typescript">
+	function addAll(x, y) {
+		var numbers = [];
+		for (var _i = 2; _i < arguments.length; _i++) {
+			numbers[_i - 2] = arguments[_i];
+		}
+		var sum = x + y;
+		numbers.forEach(function (arg) {
+			sum += arg;
+		});
+		return sum;
+	}
+	var result1 = addAll(1,2,3,4,5);
+							</code>
+
+						</pre>
+						<button type="button" class="btn btn-large btn-block btn-primary" onclick="log(result1)">Show Result.</button>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-1">
-				<a href="var-and-let.html" class="btn">
-					<span class="fa-stack fa-lg pull-right">
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                   </span>
-				</a>
-			</div>
+
+
 		</div>
+		<!--end of row-->
+
 		<!-- end of row-->
 
 
@@ -93,21 +143,18 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous">
-	</script>
-	<script>
+		crossorigin="anonymous"></script>
+   	<script>
 		function log(msg){
 			toastr.info(msg);
 		}
-
-		
 	</script>
 
+	<script src="spread.js"></script>
+	<script src="rest.js"></script>
 
 
 
-
-	</script>
 
 </body>
 
