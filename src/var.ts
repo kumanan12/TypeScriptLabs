@@ -1,5 +1,5 @@
 var x = 3;
-function func(randomize) {
+function func(randomize:boolean) {
     if (randomize) {
         var x = Math.random();
         return x;
