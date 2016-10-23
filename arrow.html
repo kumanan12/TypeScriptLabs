@@ -27,23 +27,33 @@
 
 <body>
 	<div class="container">
-		<h1>Learn ES6 using TypeScript - Title </h1>
+		<h1>Arrow <q>=></q></h1>
 
 		<div class="row">
 			<blockquote>
-				<p>functions </p>
-				<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+				<ul>
+					<li>Shorthand for functions</li>
+					<li>Shares the same this operator of the surrounding scope.</li>
+				</ul>
 			</blockquote>
 		</div>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">file name</h3>
+						<h3 class="panel-title">arrow.ts</h3>
 					</div>
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
+	function addAll(numbers:Array<number>): number{
+		let sum = 0;
+		numbers.forEach(number => {sum += number});
+		return sum;
+	}
+
+	var numbers = [1, 2, 3, 4, 5]
+	var sum3 = addAll(numbers);								
                             </code>
 						</pre>
 					</div>
@@ -52,14 +62,21 @@
 			<div class="col-md-6">
 				<div class="panel panel-success">
 					<div class="panel-heading">
-						<h3 class="panel-title">file name is JS</h3>
+						<h3 class="panel-title">arrow.js</h3>
 					</div>
 					<div class="panel-body">
 						<pre>
 							<code class="language-javascript">
+	function addAll(numbers) {
+		var sum = 0;
+		numbers.forEach(function (number) { sum += number; });
+		return sum;
+	}
+	var numbers = [1, 2, 3, 4, 5];
+	var sum3 = addAll(numbers);								
                             </code>
 						</pre>
-							<button type="button" class="btn btn-large btn-block btn-primary" onclick="showResultOfLet()">Show Result.</button>
+							<button type="button" class="btn btn-large btn-block btn-primary" onclick="log(sum3)">Show Result.</button>
 
 					</div>
 				</div>
@@ -102,10 +119,16 @@
 			toastr.info(msg);
 		}
 
+
 	</script>
-	<script src="arrow.js">
+
+<script src="arrow.js">
 		
 	</script>
+
+
+
+	
 
 </body>
 
