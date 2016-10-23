@@ -1,13 +1,13 @@
 
 let x = 3;
-function func(randomize) {
+function getRandomNumber(randomize:boolean) {
     if (randomize) {
         let x = Math.random();
         return x;
     }
     return x;
 }
-var result = func(false);
+var result = getRandomNumber(false);
 
 
 

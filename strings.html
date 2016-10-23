@@ -33,7 +33,7 @@
 
 <body>
 	<div class="container">
-		<h1> </h1>
+		<h1>String Templates & String Methods </h1>
 
 		<div class="row">
 			<blockquote>
@@ -41,40 +41,41 @@
 			</blockquote>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">file name</h3>
+						<h3 class="panel-title">strings.ts</h3>
 					</div>
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
-                            </code>
-						</pre>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title">file name is JS</h3>
-					</div>
-					<div class="panel-body">
-						<pre>
-							<code class="language-javascript">
-                            </code>
-						</pre>
-							<button type="button" class="btn btn-large btn-block btn-primary" onclick="showResultOfLet()">Show Result.</button>
+    let person = {
+        name: "Kumanan Murugesan",
+        city: "Morrisville",
+        state: "NC",
+        zip: 27560
+    }
 
+    let s = `
+    ${person.name},
+    ${person.city}, ${person.state},
+    ${person.zip}`;
+
+    let indexOfName = s.indexOf(person.name);
+    let startsWithName = s.startsWith(person.name);
+    let endsWith = s.endsWith(person.zip);                               
+                            </code>
+						</pre>
 					</div>
 				</div>
 			</div>
+			
 
 		</div>
 		<!-- end of row-->
 		<div class="row">
 			<div class="col-md-1">
-				<a href="typescript-getting-started.html" class="btn">
+				<a href="array.html" class="btn">
 					<span class="fa-stack fa-lg pull-left">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
 
@@ -85,7 +86,7 @@
 				<a href="/#" class="btn btn-primary center-block">Home</a>
 			</div>
 			<div class="col-md-1">
-				<a href="var-and-let.html" class="btn">
+				<a href="class.html" class="btn">
 					<span class="fa-stack fa-lg pull-right">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                    </span>

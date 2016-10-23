@@ -6,26 +6,26 @@
 	<title>TypeScript Labs- Arrays</title>
 
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-		crossorigin="anonymous"></script>
+					crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-		crossorigin="anonymous">
+					crossorigin="anonymous">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-		crossorigin="anonymous">
+					crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" type="" href="prism.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
+					crossorigin="anonymous"></script>
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	<script src="prism.js"></script>
 	<script src="https://use.fontawesome.com/71e8cb28ea.js"></script>
-    <script>
+	<script>
 		function log(msg){
 			toastr.info(msg);
 		}
@@ -37,70 +37,88 @@
 
 <body>
 	<div class="container">
-		<h1>Learn ES6 using TypeScript - Title </h1>
+		<h1>Arrays </h1>
 
 		<div class="row">
 			<blockquote>
-				<p>functions </p>
-				<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+				<dl>
+					<dt>Array.find()</dt>
+					<dd>Returns the <q>value</q> of the first element in the array where predicate is true, and undefined otherwise.</dd>
+					<dt>Array.findIndex()</dt>
+					<dd>Immediately returns that element index. Otherwise, findIndex returns -1.
+					</dd>
+					<dt>Array.from()</dt>
+					<dd>Creates an array from an array-like object</dd>
+					<dt>Array.of()</dt>
+					<dd>Returns a new array from a set of elements.</dd>
+				</dl>
+				
 			</blockquote>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">file name</h3>
+						<h3 class="panel-title">array.ts</h3>
 					</div>
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
+	let numbers = [10, 20, 30, 40, 50, 60, 70];
+
+	let foundNumber = numbers.find(t => { return t === 30; });
+
+	let foundNumberIndex = numbers.findIndex(function (t) { return t === 30; });
+
+	function getSum(){
+    	let numbers = Array.from(arguments ,  t => {return t - 10});  
+    	return numbers.reduce((prev, next) => {return prev + next });
+	}
+
+	let sum = getSum(10, 20, 30);								
                             </code>
 						</pre>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title">file name is JS</h3>
-					</div>
-					<div class="panel-body">
-						<pre>
-							<code class="language-javascript">
-                            </code>
-						</pre>
+						<div class="btn-group btn-group-large" role="group" aria-label="...">
+							<button type="button" class="btn btn-default" onclick="log(foundNumber)">Find 30</button>
+							<button type="button" class="btn btn-default" onclick="log(foundNumberIndex)">Find Index of 30</button>
+							<button type="button" class="btn btn-default" onclick="log(sum)">Find Sum</button>
+						</div>
 					</div>
 				</div>
 			</div>
 
-		</div><!-- end of row-->
+
+		</div>
+		<!-- end of row-->
 		<div class="row">
 			<div class="col-md-1">
-                <a href="typescript-getting-started.html" class="btn">
-                    <span class="fa-stack fa-lg pull-left">
+				<a href="arrow.html" class="btn">
+					<span class="fa-stack fa-lg pull-left">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
 
                 </span>
-                </a>
+				</a>
 			</div>
 			<div class="col-md-10 ">
 				<a href="/#" class="btn btn-primary center-block">Home</a>
 			</div>
 			<div class="col-md-1">
-				<a href="var-and-let.html" class="btn">
-                    <span class="fa-stack fa-lg pull-right">
+				<a href="class.html" class="btn">
+					<span class="fa-stack fa-lg pull-right">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                    </span>
-                </a>
+				</a>
 			</div>
-		</div><!-- end of row-->
+		</div>
+		<!-- end of row-->
 
 
-	</div><!-- end of container-->
+	</div>
+	<!-- end of container-->
 
 	<!-- Latest compiled and minified JavaScript -->
 
-    <script src="array.js">
+	<script src="array.js">
 
     </script>
 </body>

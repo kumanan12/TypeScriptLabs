@@ -46,15 +46,15 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-typescript">
-    var x = 3;
-    function func(randomize: boolean) {
-        if (randomize) {
-            var x = Math.random();
-            return x;
-        }
-        return x;
-    }
-    var result = func(false);
+	var x = 3;
+	function getRandomNumber(randomize:boolean) {
+		if (randomize) {
+			var x = Math.random();
+			return x;
+		}
+		return x;
+	}
+	var result = getRandomNumber(false);
                             </code>
 						</pre>
 					</div>
@@ -68,15 +68,15 @@
 					<div class="panel-body">
 						<pre>
 							<code class="language-javascript">
-    var x = 3;
-    function func(randomize) {
-        if (randomize) {
-            var x = Math.random();
-            return x;
-        }
-        return x;
-    }
-    var result = func(false);
+	var x = 3;
+	function getRandomNumber(randomize) {
+		if (randomize) {
+			var x = Math.random();
+			return x;
+		}
+		return x;
+	}
+	var result = getRandomNumber(false);
                         </code>
 						</pre>
 
@@ -98,15 +98,15 @@
 					</div>
 					<div class="panel-body">
 						<pre><code class="language-typescript">
-		let x = 3;
-		function func(randomize) {
-			if (randomize) {
-				let x = Math.random();
-				return x;
-			}
+	let x = 3;
+	function getRandomNumber(randomize:boolean) {
+		if (randomize) {
+			let x = Math.random();
 			return x;
 		}
-		var result = func(false);
+		return x;
+	}
+	var result = getRandomNumber(false);
                             </code>
 						</pre>
 					</div>
@@ -121,14 +121,15 @@
 						<pre>
 							<code class="language-javascript">
 	var x = 3;
-	function func(randomize) {
+	function getRandomNumber(randomize) {
 		if (randomize) {
 			var x_1 = Math.random();
 			return x_1;
 		}
 		return x;
 	}
-	var result = func(false);
+	var result = getRandomNumber(false);
+
                         </code>
 						</pre>
 

@@ -1,12 +1,12 @@
 var x = 3;
-function func(randomize:boolean) {
+function getRandomNumber(randomize:boolean) {
     if (randomize) {
         var x = Math.random();
         return x;
     }
     return x;
 }
-var result = func(false);
+var result = getRandomNumber(false);
 
 
 function showResult() {
