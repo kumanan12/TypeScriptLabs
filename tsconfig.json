@@ -1,8 +1,6 @@
 {
-    "compileOnSave": true,
-    "target":"es5",
-     "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ]
+    // "target":"es5",
+    //  "exclude": [
+    //     "node_modules"
+    // ]
 }

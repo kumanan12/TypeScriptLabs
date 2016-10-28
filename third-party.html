@@ -22,71 +22,54 @@
 
 	<script src="prism.js"></script>
 	<script src="https://use.fontawesome.com/71e8cb28ea.js"></script>
+	<script>
+		function log(msg){
+			toastr.info(msg);
+		}
+
+	</script>
 
 </head>
 
 <body>
 	<div class="container">
-		<h1>Arrow <q>=></q></h1>
+		<h1>Using 3rd Party JS </h1>
+		<h5>Using JQuery</h5>
 
 		<div class="row">
 			<blockquote>
-				<ul>
-					<li>Shorthand for functions</li>
-					<li>Shares the same this operator of the surrounding scope.</li>
-				</ul>
+
 			</blockquote>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">arrow.ts</h3>
+						<h3 class="panel-title"></h3>
 					</div>
 					<div class="panel-body">
-						<pre>
-							<code class="language-typescript">
-	function addAll(numbers:Array<number>): number{
-		let sum = 0;
-		numbers.forEach(number => {sum += number});
-		return sum;
-	}
-
-	var numbers = [1, 2, 3, 4, 5]
-	var sum3 = addAll(numbers);								
-                            </code>
-						</pre>
+						
+							<div class="form-group">
+								<label for="username">Username</label>
+								<input type="text" class="form-control" id="username" placeholder="Username">
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+							
+							<button type="submit" class="btn btn-default" id="btnSubmit">Submit</button>
+						
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title">arrow.js</h3>
-					</div>
-					<div class="panel-body">
-						<pre>
-							<code class="language-javascript">
-	function addAll(numbers) {
-		var sum = 0;
-		numbers.forEach(function (number) { sum += number; });
-		return sum;
-	}
-	var numbers = [1, 2, 3, 4, 5];
-	var sum3 = addAll(numbers);								
-                            </code>
-						</pre>
-							<button type="button" class="btn btn-large btn-block btn-primary" onclick="log(sum3)">Show Result.</button>
-
-					</div>
-				</div>
-			</div>
+			
 
 		</div>
 		<!-- end of row-->
 		<div class="row">
 			<div class="col-md-1">
-				<a href="spread.html" class="btn">
+				<a href="modules.html" class="btn">
 					<span class="fa-stack fa-lg pull-left">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
 
@@ -96,13 +79,7 @@
 			<div class="col-md-10 ">
 				<a href="/#" class="btn btn-primary center-block">Home</a>
 			</div>
-			<div class="col-md-1">
-				<a href="array.html" class="btn">
-					<span class="fa-stack fa-lg pull-right">
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                   </span>
-				</a>
-			</div>
+			
 		</div>
 		<!-- end of row-->
 
@@ -114,21 +91,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous">
 	</script>
-	<script>
-		function log(msg){
-			toastr.info(msg);
-		}
+    <script src="third-party.js"></script>
 
-
-	</script>
-
-<script src="arrow.js">
-		
-	</script>
-
-
-
-	
 
 </body>
 
