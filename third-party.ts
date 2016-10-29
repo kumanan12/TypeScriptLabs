@@ -6,4 +6,4 @@ function getFormData(){
                 Email: ${email} `);
 }
 
-$("#btnSubmit")
+$("#btnSubmit").click(getFormData);

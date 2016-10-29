@@ -3,4 +3,4 @@ function getFormData() {
     var email = $("#email").val();
     toastr.info("Username: " + username + " \n                Email: " + email + " ");
 }
-$("#btnSubmit");
+$("#btnSubmit").click(getFormData);
