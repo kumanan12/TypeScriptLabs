@@ -1,6 +1,7 @@
-function add(num1:number, num2:number){
+function add(num1, num2){
 
     return num1+num2;
 }
 
-add(10,6);
+let result= add(10,6);
+console.log(result)

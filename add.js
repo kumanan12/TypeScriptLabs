@@ -1,4 +1,6 @@
-function add(num1, num2) {
-    return num1 + num2;
+"use strict";
+function add(n1, n2) {
+    return n1 + n2;
 }
-add(10, 6);
+let result = add(2, "3");
+console.log(result);

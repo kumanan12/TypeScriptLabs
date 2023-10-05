@@ -18,4 +18,4 @@ function bar() {
 // for(var idx of a){
 //     console.log(idx);
 // }
-//console.log( o.x,o.y); 
+//console.log( o.x,o.y);
